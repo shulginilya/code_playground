@@ -3,9 +3,8 @@ import { AirportTicketsArrayType, } from './types';
 
 const sampleInput = testCase1.input;
 
-export const airportTickets = (ticketsInput: AirportTicketsArrayType): string | null => {
-    if (ticketsInput) {
-        const tickets = [...sampleInput];
+export const airportTickets = (tickets: AirportTicketsArrayType): string | null => {
+    if (tickets) {
         const travelPlan: string[] = [];
         /*
             Algo
