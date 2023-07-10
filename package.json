@@ -2,7 +2,7 @@
 	"name": "events_spread_mini",
 	"version": "0.1.0",
 	"scripts": {
-		"start": "ts-node ./src/index.ts",
+		"script:airport_tickets": "ts-node ./src/airport_tickets/index.ts",
 		"test:unit": "jest"
 	},
 	"devDependencies": {

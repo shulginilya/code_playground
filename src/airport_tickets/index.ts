@@ -1,25 +1,22 @@
-interface AirportTicketType {
-    source: string;
-    destination: string;
-};
-type AirportTicketsArrayType = AirportTicketType[];
+import { testCase1 } from './testInputs';
+import {
+    AirportTicketsArrayType,
+    AirportTicketType,
+    GenericObjectType,
+} from './types';
 
-const sampleInput = [
-    {
-        source: 'Amsterdam',
-        destination: 'Berlin'
-    },
-    {
-        source: 'Paris',
-        destination: 'London'
-    },
-    {
-        source: 'London',
-        destination: 'Amsterdam'
-    }
-];
+const sampleInput = testCase1.input;
 
-const airport_tickets = (sampleInput: AirportTicketsArrayType): string => {
-    let res = '';
-    return res;
+export const airportTickets = (sampleInput: AirportTicketsArrayType): string => {
+    const tickets = [...sampleInput];
+    let originallyPlannedDests = '';    
+    /*
+        Prepare our dictionary
+    */
+    const ticketsDictionary: GenericObjectType = {};
+    tickets.forEach((t: AirportTicketType) => ticketsDictionary[t.source] = t.destination);
+    console.log('ticketsDictionary: ', ticketsDictionary);
+    return originallyPlannedDests;
 };
+
+airportTickets(sampleInput);
