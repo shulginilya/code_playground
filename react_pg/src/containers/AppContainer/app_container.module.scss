@@ -1,0 +1,26 @@
+@use '@/styles/variables' as *;
+
+.app_container {
+    position: relative;
+    height: 100vh;
+    @media (min-width: $min-screen-sm) {
+        display: flex;
+    }
+    &__sidebar {
+        width: 100%;
+        padding: 10px;
+        background-color: $grey;
+        @media (min-width: $min-screen-sm) {
+            width: 250px;
+            flex: 0 0 auto;
+        }
+    }
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+        flex: 1 1 auto;
+    }
+}
