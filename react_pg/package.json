@@ -14,7 +14,8 @@
 		"lint:check": "npm run lint:check:prettier && npm run lint:check:eslint",
 		"cy:run": "node_modules/.bin/cypress run",
 		"cy:open": "node_modules/.bin/cypress open",
-		"test:e2e": "npm run cy:run -- --config video=false --browser chrome --spec tests/e2e/specs/test.js"
+		"test:e2e": "npm run cy:run -- --config video=false --browser chrome --spec tests/e2e/specs/test.js",
+		"test:unit": "jest"
 	},
 	"dependencies": {
 		"@babel/core": "7.19.3",
@@ -39,6 +40,7 @@
 		"cypress": "^9.7.0",
 		"@types/jest": "^29.5.2",
 		"jest": "^29.5.0",
-		"ts-jest": "^29.1.0"
+		"ts-jest": "^29.1.0",
+		"ts-node": "^10.9.1"
 	}
 }
