@@ -27,7 +27,8 @@
 		"useDefineForClassFields": true
 	},
 	"include": [
-		"src"
+		"src",
+		"./setup-jest.ts"
 	],
 	"references": [
 		{
