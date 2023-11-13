@@ -1,15 +1,15 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import {
-	AppContainer,
-	NotFoundContainer,
-} from '@/containers';
+	Home,
+	NotFound,
+} from '@/pages';
 
 const App = () => (
 	<>
 		<BrowserRouter>
 			<Routes>
-				<Route path="/" element={<AppContainer />} />
-				<Route path="*" element={<NotFoundContainer />} />
+				<Route path="/" element={<Home />} />
+				<Route path="*" element={<NotFound />} />
 			</Routes>
 		</BrowserRouter>
 	</>

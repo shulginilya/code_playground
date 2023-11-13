@@ -1,15 +1,17 @@
 import type { Config } from 'jest';
 
-export default async (): Promise<Config> => {
-    return {
-        verbose: true,
-        preset: "ts-jest/presets/js-with-ts-esm",
-        testMatch: ["**/src/**/*.spec.[jt]s?(x)"],
-        testEnvironment: "jsdom",
-        setupFilesAfterEnv: ["./setup-jest.ts"],
-        moduleNameMapper: {
-            '\\.(css|less|scss)$': 'identity-obj-proxy'
-        },
-        resetMocks: true
-    };
+const config: Config = {
+    roots: ['<rootDir>/src'],
+    setupFiles: ['react-app-polyfill/jsdom'],
+    setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
+    testMatch: ['<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}', '<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}'],
+    testEnvironment: 'jsdom',
+    modulePaths: ['<rootDir>/src'],
+    moduleNameMapper: {
+        '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
+    },
+    moduleFileExtensions: ['js', 'ts', 'tsx', 'json', 'jsx', 'node'],
+    resetMocks: true,
 };
+
+export default config;
