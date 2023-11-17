@@ -1,2 +1,2 @@
-export * from './Sample';
 export * from './Spinner';
+export * from './Table';

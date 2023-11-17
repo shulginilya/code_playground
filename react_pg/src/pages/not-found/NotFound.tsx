@@ -1,5 +1,16 @@
-export const NotFound: React.FC = () => (
-    <div data-testid="not_found_root">
-        404: page is not found
-    </div>
-);
+import { useMemo } from 'react';
+
+import { MainLayout } from '@/layouts';
+
+export const NotFound = (): JSX.Element => {
+    const componentRender = useMemo(() => (
+        <div data-testid="not_found_root">
+            404: page is not found
+        </div>
+    ), []);
+    return (
+        <MainLayout>
+            {componentRender}
+        </MainLayout>
+    )
+};

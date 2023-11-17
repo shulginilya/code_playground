@@ -33,11 +33,11 @@ const initialState: initialStateType = {
     Slice definition
 */
 export const sampleSlice = createSlice({
-    name: "sample",
+    name: "sampleSlice",
     initialState,
     reducers: {},
 });
 
-export const selectData = (state: RootState) => state.sample;
+export const selectData = (state: RootState) => state.sampleSlice;
 
 export default sampleSlice.reducer;

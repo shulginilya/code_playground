@@ -1,9 +1,10 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 import sampleReducer from "@/appStore/reducers/sampleSlice";
+import type { PartialDeep } from 'type-fest';
 
 export const store = configureStore({
     reducer: {
-        sample: sampleReducer,
+        sampleSlice: sampleReducer,
     },
 });
 
@@ -15,3 +16,5 @@ export type AppThunk<ReturnType = void> = ThunkAction<
     unknown,
     Action<string>
 >;
+
+export type PartialRootState = PartialDeep<RootState>;
