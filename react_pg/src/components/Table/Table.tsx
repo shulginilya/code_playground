@@ -10,6 +10,9 @@ export const Table = ({
     excludedColumns = [],
     tableColumnsMapping = {}
 }: ITable): JSX.Element | null => {
+    if (columns.length === 0) {
+        return null;
+    }
     // build table headers
     const renderTableHeader = useMemo(() => (
         columns.map((column: ITableColumn) => {
