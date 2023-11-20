@@ -8,6 +8,11 @@ jest.mock('@/appStore/hooks', () => ({
     useAppSelector: () => jest.fn()
 }));
 
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => jest.fn()
+}));
+
 describe('HomePage', () => {
     it('should render the page', () => {
         render(<Sample />);
