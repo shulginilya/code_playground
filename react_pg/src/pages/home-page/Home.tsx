@@ -2,9 +2,14 @@ import { useMemo } from 'react';
 
 import { MainLayout } from '@/layouts';
 
+import styles from './home.module.scss';
+
 export const Home = (): JSX.Element => {
     const componentRender = useMemo(() => (
-        <div data-testid="homepage_root">
+        <div
+            className={styles.home}
+            data-testid="homepage_root"
+        >
             homepage
         </div>
     ), []);

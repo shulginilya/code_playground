@@ -1,6 +1,12 @@
 import { useMemo } from 'react';
 
-import { ITable, ITableItem, ITableColumn } from '@/components';
+import {
+    ITable,
+    ITableItem,
+    ITableColumn,
+} from './Table.types';
+
+import styles from './table.module.scss';
 
 export const Table = ({
     resourseName,
@@ -50,8 +56,11 @@ export const Table = ({
         })
     ), [items]);
     return (
-        <div>
-            <table data-testid={dataTestId || ''}>
+        <div className={styles.table}>
+            <table
+                className={styles.table}
+                data-testid={dataTestId || ''}
+            >
                 <thead>
                     <tr>
                         {renderTableHeader}
