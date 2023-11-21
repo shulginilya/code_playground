@@ -1,3 +1,10 @@
+import styles from './spinner.module.scss';
+
 export const Spinner = (): JSX.Element => (
-    <div data-testid="spinner_root">spinner</div>
+    <div
+        className={styles.spinner}
+        data-testid="spinner_root"
+    >
+        <div className={styles.spinner__ring} />
+    </div>
 );
