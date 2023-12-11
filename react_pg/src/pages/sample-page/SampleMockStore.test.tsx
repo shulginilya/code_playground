@@ -28,11 +28,11 @@
 //     )
 // };
 
-describe('HomePage (mock state version)', () => {
-    it('should render the page', () => {
-        // setup();
-        // const homePageWrapper = screen.getByTestId('homepage_root');
-        // expect(homePageWrapper).toBeInTheDocument();
-        expect(1).toBe(1);
-    });
+describe("HomePage (mock state version)", () => {
+	it("should render the page", () => {
+		// setup();
+		// const homePageWrapper = screen.getByTestId('homepage_root');
+		// expect(homePageWrapper).toBeInTheDocument();
+		expect(1).toBe(1);
+	});
 });

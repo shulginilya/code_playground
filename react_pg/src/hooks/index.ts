@@ -1,1 +1,1 @@
-export * from './SampleHook';
+export * from "./SampleHook";

@@ -1,14 +1,12 @@
 import React, { Suspense } from "react";
-import { createRoot } from 'react-dom/client';
+import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
 import { store } from "@/appStore/store";
 import App from "@/App";
-import {
-	Spinner,
-} from '@/components';
-import 'sanitize.css';
-import '@/styles/reset.scss';
-import '@/styles/global.scss';
+import { Spinner } from "@/components";
+import "sanitize.css";
+import "@/styles/reset.scss";
+import "@/styles/global.scss";
 
 createRoot(document.getElementById("root")!).render(
 	<React.StrictMode>
@@ -17,5 +15,5 @@ createRoot(document.getElementById("root")!).render(
 				<App />
 			</Suspense>
 		</Provider>
-	</React.StrictMode>
+	</React.StrictMode>,
 );

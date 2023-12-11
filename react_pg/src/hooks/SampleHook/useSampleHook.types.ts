@@ -1,4 +1,4 @@
 export interface IReturnData {
-    placeholderData: string;
-    placeholderFunc: () => number;
-};
+	placeholderData: string;
+	placeholderFunc: () => number;
+}

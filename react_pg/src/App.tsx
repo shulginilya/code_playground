@@ -1,9 +1,5 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import {
-	Home,
-	Sample,
-	NotFound,
-} from '@/pages';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Home, Sample, NotFound } from "@/pages";
 
 const App = () => (
 	<>

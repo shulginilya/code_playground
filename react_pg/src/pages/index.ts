@@ -1,3 +1,3 @@
-export * from './home-page';
-export * from './sample-page';
-export * from './not-found';
+export * from "./home-page";
+export * from "./sample-page";
+export * from "./not-found";

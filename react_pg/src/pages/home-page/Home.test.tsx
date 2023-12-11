@@ -1,25 +1,26 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen } from "@testing-library/react";
 
-import { Home } from '@/pages';
+import { Home } from "@/pages";
 
-jest.mock('@/appStore/hooks', () => ({
-    ...jest.requireActual('@/appStore/hooks'),
-    useAppDispatch: () => jest.fn(),
-    useAppSelector: () => jest.fn(() => ({
-        status: 'succeeded',
-        users: []
-    }))
+jest.mock("@/appStore/hooks", () => ({
+	...jest.requireActual("@/appStore/hooks"),
+	useAppDispatch: () => jest.fn(),
+	useAppSelector: () =>
+		jest.fn(() => ({
+			status: "succeeded",
+			users: [],
+		})),
 }));
 
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
-    useNavigate: () => jest.fn()
+jest.mock("react-router-dom", () => ({
+	...jest.requireActual("react-router-dom"),
+	useNavigate: () => jest.fn(),
 }));
 
-describe('HomePage', () => {
-    it('should render the page', () => {
-        render(<Home />);
-        const homePageWrapper = screen.getByTestId('homepage_root');
-        expect(homePageWrapper).toBeInTheDocument();
-    });
+describe("HomePage", () => {
+	it("should render the page", () => {
+		render(<Home />);
+		const homePageWrapper = screen.getByTestId("homepage_root");
+		expect(homePageWrapper).toBeInTheDocument();
+	});
 });

@@ -1,41 +1,39 @@
-import {
-    createSlice,
-} from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "@/appStore/store";
 
 interface ISample {
-    name: string;
-    email: string;
-    age: number;
-};
+	name: string;
+	email: string;
+	age: number;
+}
 
 /*
     We define state structure
 */
 export enum Status {
-    idle = 'idle',
-    loading = 'loading',
-    succeeded = 'succeeded',
-    failed = 'failed'
-};
+	idle = "idle",
+	loading = "loading",
+	succeeded = "succeeded",
+	failed = "failed",
+}
 interface initialStateType {
-    data: ISample[],
-    status: Status.idle | Status.loading | Status.succeeded | Status.failed,
-    error: string | null;
-};
+	data: ISample[];
+	status: Status.idle | Status.loading | Status.succeeded | Status.failed;
+	error: string | null;
+}
 const initialState: initialStateType = {
-    data: [],
-    status: Status.idle,
-    error: null
+	data: [],
+	status: Status.idle,
+	error: null,
 };
 
 /*
     Slice definition
 */
 export const sampleSlice = createSlice({
-    name: "sampleSlice",
-    initialState,
-    reducers: {},
+	name: "sampleSlice",
+	initialState,
+	reducers: {},
 });
 
 export const selectData = (state: RootState) => state.sampleSlice;

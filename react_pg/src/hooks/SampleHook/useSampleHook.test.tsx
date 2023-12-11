@@ -1,12 +1,12 @@
-import { renderHook } from '@testing-library/react-hooks';
+import { renderHook } from "@testing-library/react-hooks";
 
-import { useSampleHook } from './useSampleHook';
+import { useSampleHook } from "./useSampleHook";
 
-describe('useSampleHook', () => {
-    it.skip('should placeholder return data be specified', () => {
-        const { result } = renderHook(() => useSampleHook());
-        const { placeholderData, placeholderFunc } = result.current;
-        expect(placeholderData).toBe('placeholder');
-        expect(placeholderFunc()).toBe(10);
-    });
+describe("useSampleHook", () => {
+	it.skip("should placeholder return data be specified", () => {
+		const { result } = renderHook(() => useSampleHook());
+		const { placeholderData, placeholderFunc } = result.current;
+		expect(placeholderData).toBe("placeholder");
+		expect(placeholderFunc()).toBe(10);
+	});
 });
