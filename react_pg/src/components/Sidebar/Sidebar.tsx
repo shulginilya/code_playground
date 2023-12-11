@@ -10,6 +10,7 @@ export const Sidebar = (): JSX.Element => {
 			<ul className={styles.sidebar__list}>
 				<li className={styles.sidebar__list__item}>
 					<button
+						type="button"
 						className={styles.sidebar__list__item__link}
 						onClick={() => navigate("/")}
 					>
@@ -18,6 +19,7 @@ export const Sidebar = (): JSX.Element => {
 				</li>
 				<li className={styles.sidebar__list__item}>
 					<button
+						type="button"
 						className={styles.sidebar__list__item__link}
 						onClick={() => navigate("/sample_page")}
 					>

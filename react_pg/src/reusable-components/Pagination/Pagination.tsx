@@ -20,7 +20,7 @@ export const Pagination = ({
 			pagesArray.push(i);
 		}
 		return pagesArray;
-	}, [currentPage]);
+	}, [recordsCount, recordsPerPage]);
 	// function which returns rendered pagination
 	const renderPagination = useMemo((): JSX.Element => {
 		const pageItems = pages.map((p) => {
@@ -35,6 +35,7 @@ export const Pagination = ({
 					className={paginationItemClass}
 				>
 					<button
+						type="button"
 						className={styles.pagination__list__item__link}
 						onClick={() => navigate(`${navigateUrl}/${p}`)}
 					>
@@ -44,7 +45,7 @@ export const Pagination = ({
 			);
 		});
 		return <ul className={styles.pagination__list}>{pageItems}</ul>;
-	}, [currentPage]);
+	}, [currentPage, navigate, navigateUrl, pages]);
 	// return end results component
 	return (
 		<div className={styles.pagination} data-testid="pagination_root">

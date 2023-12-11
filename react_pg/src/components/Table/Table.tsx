@@ -36,7 +36,7 @@ export const Table = ({
 					);
 				})
 				.filter((c) => c !== null),
-		[columns],
+		[columns, resourseName, tableColumnsMapping, excludedColumns],
 	);
 	// build table rows
 	const renderTableBody = useMemo(
@@ -60,7 +60,7 @@ export const Table = ({
 						.filter((c) => c !== null);
 				return <tr key={tblRowKey}>{generateTblCells()}</tr>;
 			}),
-		[items],
+		[items, excludedColumns, resourseName],
 	);
 	return (
 		<div className={styles.table}>
